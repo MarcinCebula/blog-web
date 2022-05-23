@@ -4,6 +4,12 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 module.exports = withBundleAnalyzer({
+	env: {
+		NOTION_ROOT_PAGE_ID: process.env.NOTION_ROOT_PAGE_ID,
+		VERCEL_ENV: process.env.VERCEL_ENV,
+    GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID,
+		APP_DISABLE_DESKTOP: process.env.APP_DISABLE_DESKTOP
+  },
   staticPageGenerationTimeout: 300,
   images: {
     domains: [
